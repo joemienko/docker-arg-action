@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:latest
 
 ARG APTIBLE_USER=APTIBLE_USER
 
@@ -18,6 +18,4 @@ COPY aptible_login.sh /
 COPY aptible_ssh.sh /
 
 # Login to aptible CLI
-RUN expect aptible_login.sh $APTIBLE_USER $APTIBLE_PASSWORD
-
-ENTRYPOINT ["/entrypoint.sh"]
+RUN expect aptible_login.sh APTIBLE_USER APTIBLE_PASSWORD
