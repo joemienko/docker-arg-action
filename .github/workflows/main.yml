@@ -14,5 +14,4 @@ jobs:
           APTIBLE_PASSWORD: ${{ secrets.APTIBLE_PASSWORD }}
         uses: buildtool/build-action@v1
         with:
-          dockerfile: Dockerfile
           docker-build-args: '--build-arg "APTIBLE_USER=${APTIBLE_USER}" --build-arg "APTIBLE_PASSWORD=${APTIBLE_PASSWORD}"'
