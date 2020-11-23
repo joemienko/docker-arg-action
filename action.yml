@@ -1,2 +1,10 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'GitHub Action for Build'
+description: 'Build docker image'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.docker-build-args }}
+branding:
+  icon: 'package'
+  color: 'green'

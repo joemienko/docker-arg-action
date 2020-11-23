@@ -12,7 +12,5 @@ jobs:
         env: # environment variables
           APTIBLE_USER: ${{ secrets.APTIBLE_USER }}
           APTIBLE_PASSWORD: ${{ secrets.APTIBLE_PASSWORD }}
-        uses: buildtool/build-action@v1
         with:
-          dockerfile: dockerfiles/Dockerfile
           docker-build-args: '--build-arg "APTIBLE_USER=${APTIBLE_USER}" --build-arg "APTIBLE_PASSWORD=${APTIBLE_PASSWORD}"'
