@@ -5,6 +5,3 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.docker-build-args }}
-branding:
-  icon: 'package'
-  color: 'green'
