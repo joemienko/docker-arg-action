@@ -11,6 +11,3 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - "APTIBLE_USER=${inputs.APTIBLE_USER}"
-    - "APTIBLE_PASSWORD=${inputs.APTIBLE_PASSWORD}"
