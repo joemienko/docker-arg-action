@@ -12,7 +12,7 @@ jobs:
         name: Run build with args
         uses: joemienko/sprout-data-exchange@v1.0
         env: # environment variables
-          APTIBLE_USER: ${{ secrets.APTIBLE_USER }}
+          #APTIBLE_USER: ${{ secrets.APTIBLE_USER }}
           APTIBLE_PASSWORD: ${{ secrets.APTIBLE_PASSWORD }}
         with:
-          docker-build-args: '--build-arg APTIBLE_USER=${APTIBLE_USER} --build-arg APTIBLE_PASSWORD=${APTIBLE_PASSWORD}'
+          docker-build-args: '--build-arg APTIBLE_USER=${{ secrets.APTIBLE_USER }} --build-arg APTIBLE_PASSWORD=${APTIBLE_PASSWORD}'
