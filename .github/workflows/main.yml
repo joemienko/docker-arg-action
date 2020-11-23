@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
       -
         name: Run build with args
-        uses: joemienko/sprout-data-exchange
+        uses: joemienko/sprout-data-exchange@v1.0
         env: # environment variables
           APTIBLE_USER: ${{ secrets.APTIBLE_USER }}
           APTIBLE_PASSWORD: ${{ secrets.APTIBLE_PASSWORD }}
