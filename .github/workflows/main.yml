@@ -1,11 +1,16 @@
 on:
   push:
+
 jobs:
   sprout_data_exchange_job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - 
         name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: name: Run build with args
+        uses: joemienko/sprout-data-exchange
         env: # environment variables
           APTIBLE_USER: ${{ secrets.APTIBLE_USER }}
           APTIBLE_PASSWORD: ${{ secrets.APTIBLE_PASSWORD }}
