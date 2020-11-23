@@ -2,7 +2,7 @@ FROM ubuntu:bionic
 
 ARG APTIBLE_USER=APTIBLE_USER
 
-ARG APTIBLE_USER=APTIBLE_PASSWORD
+ARG APTIBLE_PASSWORD=APTIBLE_PASSWORD
 
 RUN apt-get update \
   && apt-get install expect -y \
