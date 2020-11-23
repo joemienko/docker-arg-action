@@ -1,8 +1,9 @@
-FROM ubuntu:latest
+FROM debian:9.5-slim
 
-ARG APTIBLE_USER=${APTIBLE_USER}
-
-ARG APTIBLE_PASSWORD=${APTIBLE_PASSWORD}
+ARG APTIBLE_USER
+ENV APTIBLE_USER=${APTIBLE_USER}
+ARG APTIBLE_PASSWORD
+ENV APTIBLE_PASSWORD=${APTIBLE_PASSWORD}
 
 RUN apt-get update \
   && apt-get install expect -y \
@@ -18,4 +19,4 @@ COPY aptible_login.sh /
 COPY aptible_ssh.sh /
 
 # Login to aptible CLI
-RUN expect aptible_login.sh APTIBLE_USER APTIBLE_PASSWORD
+RUN expect aptible_login.sh $APTIBLE_USER $APTIBLE_PASSWORD
