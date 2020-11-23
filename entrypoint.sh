@@ -1,3 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh -l
 
-build ${@:1}
+echo "Dockerfile Rebuilt at"
+echo "::set-output name=time::$time"
